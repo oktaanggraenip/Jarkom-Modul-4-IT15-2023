@@ -19,8 +19,32 @@ Berikut tabel pembagian IP
 Dari hasil pembagian subnet diketahui terdapat sejumlah 21 Subnet
 
 ### VLSM Tree
+- Major network berada pada /19. 
+- Prefix IP kelompok kami ialah 10.71.X.X
+- Berikut pohon perhitungan VLSM
 <img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/0a44699a-5e02-4c31-99b3-29bf46e90eea">
 
+### Tabel Perhitungan
+<img src="">
+
+- Perhitungan dilakukan dengan mengurutkan subnet dari jumlah IP tertinggi (Usable IPs)
+- Masukkan IP pada setiap node seperti yang ada pada modul, misalnya pada subnet A6
+```bash
+Subnet A6:
+  NID: 10.71.0.0
+  Netmask: 255.255.248.0
+  IP range: 10.71.0.1 - 10.71.7.254
+```
+- Setelah subnet A6, selanjutnya mengatur IP pada setiap subnet sampai A21 sesuai hasil perhitungan sebelumnya. (Hasil perhitungan dapat dilihat pada [PembagianIP-IT15](https://docs.google.com/spreadsheets/d/1iyL7mE5pMhhtmgjTeYZ-ELqPOeAZv1WvcwdDAZ8P7GQ/edit?usp=sharing))
+- Setelah seluruh node IP telah diatur maka selanjutnya melakukan routing agar semua node dapat terhubung.
+- Lakukan ROUTING dengan mengisikan Network (Network Subnet yang ingin disambungkan), Mask(Mask Subnet yang ingin disambungkan), dan Next Hop (IP selanjutnya dari node yang sedang diinputkan)
+
+<img src="">
+
+- Selanjutnya memastikan semua node saling terhubung
+
+<img src="">
+  
 <br>
 
 ## <a name="CIDR"></a> CIDR
