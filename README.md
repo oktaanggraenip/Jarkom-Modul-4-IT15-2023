@@ -26,7 +26,7 @@ Berikut pohon perhitungan VLSM
 <img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/0a44699a-5e02-4c31-99b3-29bf46e90eea">
 
 ### Tabel Perhitungan
-<img src="">
+<img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/bd2d7eea-7c81-43aa-b0e5-ef31a4038e88">
 
 - Perhitungan dilakukan dengan mengurutkan subnet dari jumlah IP tertinggi (Usable IPs)
 - Masukkan IP pada setiap node seperti yang ada pada modul, misalnya pada subnet A6
@@ -36,16 +36,24 @@ Subnet A6:
   Netmask: 255.255.248.0
   IP range: 10.71.0.1 - 10.71.7.254
 ```
+- Klik PC yang ingin diinputkan, lalu pilih desktop -> IP configuration sebagai berikut:
+
+<img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/e578026c-753f-4dac-add2-48f917551893">
+
+- Lakukan setting pada bagian IPv4, Subnet Mask, dan Default Gateway
+
+<img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/ae935caf-8b85-4a76-976d-32acab3b94e9">
+
 - Setelah subnet A6, selanjutnya mengatur IP pada setiap subnet sampai A21 sesuai hasil perhitungan sebelumnya. (Hasil perhitungan dapat dilihat pada [PembagianIP-IT15](https://docs.google.com/spreadsheets/d/1iyL7mE5pMhhtmgjTeYZ-ELqPOeAZv1WvcwdDAZ8P7GQ/edit?usp=sharing))
 - Setelah seluruh node IP telah diatur maka selanjutnya melakukan routing agar semua node dapat terhubung.
 - Lakukan ROUTING dengan mengisikan Network (Network Subnet yang ingin disambungkan), Mask(Mask Subnet yang ingin disambungkan), dan Next Hop (IP selanjutnya dari node yang sedang diinputkan)
 
-<img src="">
+<img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/acfe2166-45fe-4a71-9c37-f7b9677b7db8">
 
 - Selanjutnya memastikan semua node saling terhubung
 
-<img src="">
-  
+<img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/651e7143-e890-43f3-9a65-ddb13364f1a7">
+
 <br>
 
 ## <a name="CIDR"></a> CIDR
