@@ -21,7 +21,8 @@ Dari hasil pembagian subnet diketahui terdapat sejumlah 21 Subnet
 ### VLSM Tree
 - Major network berada pada /19. 
 - Prefix IP kelompok kami ialah 10.71.X.X
-- Berikut pohon perhitungan VLSM
+
+Berikut pohon perhitungan VLSM
 <img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/0a44699a-5e02-4c31-99b3-29bf46e90eea">
 
 ### Tabel Perhitungan
