@@ -9,7 +9,13 @@
 - [VLSM](#VLSM)
 - [CIDR](#CIDR)
 
+Berikut tabel pembagian IP: https://docs.google.com/spreadsheets/d/1iyL7mE5pMhhtmgjTeYZ-ELqPOeAZv1WvcwdDAZ8P7GQ/edit?usp=sharing
+
 ## <a name="VLSM"></a> VLSM
+### Membuat Topologi VLSM menggunakan CPT
+<img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/053015cc-3857-4805-9982-d1f9cd0685d5">
+
+### 
 
 <br>
 
