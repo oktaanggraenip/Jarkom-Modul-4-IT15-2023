@@ -88,3 +88,421 @@ Subnet A6:
 ### CIDR Tree
 Berikut merupakan tree CIDR yang diperoleh berdasarkan pembagian subnet sebelumnya
 <img src="https://i.ibb.co/VLm2qgV/CIDR-IT15.jpg" width="700">
+
+### Setting pada GNS
+- Aura
+```
+auto eth0
+iface eth0 inet dhcp  
+
+auto eth1 # eisen
+iface eth1 inet static
+   address 10.71.24.132
+   netmask 255.255.255.252
+   broadcast 10.71.24.135
+
+auto eth2 # denken
+iface eth2 inet static
+   address 10.71.24.128
+   netmask 255.255.255.252
+   broadcast 10.71.24.131
+
+auto eth3 # frieren
+iface eth3 inet static
+   address 10.71.24.124
+   netmask 255.255.255.252
+   broadcast 10.71.24.127
+```
+
+- Eisen
+```
+auto eth0
+iface eth0 inet static
+   address 10.71.24.133
+   netmask 255.255.255.252
+   broadcast 10.71.24.135
+   gateway 10.71.24.132
+
+auto eth1
+iface eth1 inet static
+    address 10.71.24.136
+    netmask 255.255.255.252
+    broadcast 10.71.24.139
+    gateway 10.71.24.132
+
+auto eth2
+iface eth2 inet static
+    address 10.71.24.104
+    netmask 255.255.255.248
+    broadcast 10.71.24.111
+    gateway 10.71.24.132
+
+auto eth3
+iface eth3 inet static
+   address 10.71.24.144
+   netmask 255.255.255.252
+   broadcast 10.71.24.147
+   gateway 10.71.24.132
+
+auto eth4
+iface eth4 inet static
+    address 10.71.24.140
+    netmask 255.255.255.252
+    broadcast 10.71.24.143
+    gateway 10.71.24.132
+```
+
+- Stark
+```
+    address 10.71.24.137
+    netmask 255.255.255.252
+    gateway 10.71.24.136
+```
+
+- Richter
+```
+    address 10.71.24.105
+    netmask 255.255.255.248
+    gateway 10.71.24.104
+```
+
+- Revolte
+```
+    address 10.71.24.106
+    netmask 255.255.255.248
+    gateway 10.71.24.104
+```
+
+- Linie
+```
+auto eth0
+iface eth0 inet static
+   address 10.71.24.145
+   netmask 255.255.255.252
+   broadcast 10.71.24.147
+   gateway 10.71.24.144
+
+auto eth1 # ke lawine
+iface eth1 inet static
+    address 10.71.24.148
+    netmask 255.255.255.252
+    broadcast 10.71.24.151
+    gateway 10.71.24.144
+
+auto eth2 
+iface eth2 inet static
+    address 10.71.20.0
+    netmask 255.255.254.0
+    broadcast 10.71.21.255
+    gateway 10.71.24.144
+```
+
+- GranzChannel
+```
+auto eth0 
+iface eth0 inet static
+    address 10.71.20.1
+    netmask 255.255.254.0
+    gateway 10.71.20.0
+```
+
+- Lawine
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.24.149
+    netmask 255.255.255.252
+    broadcast 10.71.24.151
+    gateway 10.71.24.148
+
+auto eth1 # ke heiter
+iface eth1 inet static
+    address 10.71.24.1
+    netmask 255.255.252.192
+    broadcast 10.71.24.63
+    gateway 10.71.24.148
+
+auto eth2
+iface eth2 inet static
+    address 10.71.24.0
+    netmask 255.255.255.192
+    broadcast 10.71.24.63
+    gateway 10.71.24.148
+```
+
+- BredtRegion
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.24.2
+    netmask 255.255.255.192
+    gateway 10.71.24.0
+```
+- Heiter
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.24.3
+    netmask 255.255.252.192
+    broadcast 10.71.24.64
+    gateway 10.71.24.1
+
+auto eth1 # sein
+iface eth1 inet static
+    address 10.71.16.0
+    netmask 255.255.252.0
+    broadcast 10.71.19.255
+    gateway 10.71.24.1
+
+auto eth1 # riegelcanyon
+iface eth1 inet static
+    address 10.71.16.1
+    netmask 255.255.252.0
+    broadcast 10.71.19.255
+    gateway 10.71.24.1
+```
+
+- Sein
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.16.2
+    netmask 255.255.252.0
+    broadcast 10.71.19.255
+    gateway 10.71.16.0
+```
+
+- RiegelCanyon
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.16.3
+    netmask 255.255.252.0
+    gateway 10.71.16.1
+```
+
+- Lugner
+```
+auto eth0
+iface eth0 inet static
+   address 10.71.24.141
+   netmask 255.255.255.252
+   broadcast 10.71.24.143
+   gateway 10.71.24.140
+
+auto eth1
+iface eth1 inet static
+    address 10.71.12.0
+    netmask 255.255.252.0
+    broadcast 10.71.15.255
+    gateway 10.71.24.140
+
+auto eth2
+iface eth2 inet static
+    address 10.71.22.0
+    netmask 255.255.255.0
+    broadcast 10.71.22.255
+    gateway 10.71.24.140
+```
+
+- TurkRegion
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.12.1
+    netmask 255.255.252.0
+    gateway 10.71.12.0
+```
+
+- GrobeForest
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.22.1
+    netmask 255.255.252.0
+    gateway 10.71.22.0
+```
+
+- Denken
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.24.129
+    netmask 255.255.255.252
+    broadcast 10.71.24.131
+    gateway 10.71.24.128
+
+auto eth1 
+iface eth1 inet static
+    address 10.71.23.0
+    netmask 255.255.255.0
+    broadcast 10.71.23.255
+    gateway 10.71.24.128
+
+auto eth2
+iface eth2 inet static
+    address 10.71.23.2
+    netmask 255.255.255.0
+    broadcast 10.71.23.255
+    gateway 10.71.24.128
+```
+
+- RoyalCapital
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.23.1
+    netmask 255.255.255.0
+    gateway 10.71.23.0
+```
+
+- WillieRegion
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.23.3
+    netmask 255.255.255.0
+    gateway 10.71.23.2
+```
+
+- Frieren
+```
+auto eth0
+iface eth0 inet static
+   address 10.71.24.125
+   netmask 255.255.255.252
+   broadcast 10.71.24.127
+   gateway 10.71.24.124
+
+auto eth1 #lakekorridor
+iface eth1 inet static
+    address 10.71.24.64
+    netmask 255.255.255.224
+    broadcast 10.71.24.95
+    gateway 10.71.24.124
+
+auto eth2 #flamme
+iface eth2 inet static
+    address 10.71.24.120
+    netmask 255.255.255.252
+    broadcast 10.71.24.123
+    gateway 10.71.24.124
+```
+
+- LakeKorridor
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.24.65
+    netmask 255.255.255.224
+    gateway 10.71.24.64
+```
+
+- Flamme
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.24.121
+    netmask 255.255.255.252
+    broadcast 10.71.24.123
+    gateway 10.71.24.120
+
+auto eth1 #fern
+iface eth1 inet static
+    address 10.71.24.112
+    netmask 255.255.255.252
+    broadcast 10.71.24.115
+    gateway 10.71.24.120
+
+auto eth2 #rohrroad
+iface eth2 inet static
+    address 10.71.8.0
+    netmask 255.255.252.0
+    broadcast 10.71.11.255
+    gateway 10.71.24.120
+
+auto eth3 #himmel
+iface eth3 inet static
+    address 10.71.24.116
+    netmask 255.255.255.252
+    broadcast 10.71.24.119
+    gateway 10.71.24.120
+```
+
+- Fern
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.24.113
+    netmask 255.255.255.252
+    broadcast 10.71.24.115
+    gateway 10.71.24.112
+
+auto eth1
+iface eth1 inet static
+    address 10.71.0.0
+    netmask 255.255.248.0
+    broadcast 10.71.7.255
+    gateway 10.71.24.112
+```
+
+- LaubHills
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.0.1
+    netmask 255.255.248.0
+    gateway 10.71.0.0
+```
+
+- AppetitRegion
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.0.2
+    netmask 255.255.248.0
+    gateway 10.71.0.0
+```
+
+- RohrRoad
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.8.1
+    netmask 255.255.252.0
+    gateway 10.71.8.0
+```
+
+- Himmel
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.24.117
+    netmask 255.255.255.252
+    broadcast 10.71.24.119
+    gateway 10.71.24.116
+
+auto eth1
+iface eth1 inet static
+    address 10.71.24.96
+    netmask 255.255.255.248
+    broadcast 10.71.24.103
+    gateway 10.71.24.116
+```
+
+- SchwerMountains
+```
+auto eth0
+iface eth0 inet static
+    address 10.71.24.97
+    netmask 255.255.255.248
+    gateway 10.71.24.96
+```
+
+### Routing
+Selanjutnya dilakukan routing pada sistem GNS dengan cara berikut
+```
+route add -net <NID subnet> netmask <netmask> gw <IP gateway>
+```
+
+
