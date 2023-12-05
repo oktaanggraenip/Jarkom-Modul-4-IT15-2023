@@ -16,6 +16,8 @@ Berikut tabel pembagian IP
 ### Membuat Topologi VLSM menggunakan CPT
 <img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/afb43ea3-cd15-481e-94f7-0a359111607a">
 
+Dari hasil pembagian subnet diketahui terdapat sejumlah 21 Subnet
+
 ### VLSM Tree
 <img src="https://github.com/oktaanggraenip/Jarkom-Modul-4-IT15-2023/assets/102397053/0a44699a-5e02-4c31-99b3-29bf46e90eea">
 
