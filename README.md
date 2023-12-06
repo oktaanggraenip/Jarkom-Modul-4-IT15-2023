@@ -85,6 +85,10 @@ Subnet A6:
 - Langkah 7 (H)
 <img src="https://i.ibb.co/RHbGnVR/jarkom-7.jpg" width="700">
 
+### Pembagian CIDR
+Berikut merupakan tabel pembagian subnet pada CIDR yang telah dilakukan sebelumnya
+<img src="https://i.ibb.co/JHrKw9M/tabel-ip-cidr.png" width="700">
+
 ### CIDR Tree
 Berikut merupakan tree CIDR yang diperoleh berdasarkan pembagian subnet sebelumnya
 <img src="https://i.ibb.co/VLm2qgV/CIDR-IT15.jpg" width="700">
@@ -505,4 +509,86 @@ Selanjutnya dilakukan routing pada sistem GNS dengan cara berikut
 route add -net <NID subnet> netmask <netmask> gw <IP gateway>
 ```
 
+- Aura (A3, A4, A6, A8, A9, A11, A14, A17, A18)
+```
+route add -net <10.71.24.112> netmask <255.255.255.252> gw <10.71.24.120>
+route add -net <10.71.24.116> netmask <255.255.255.252> gw <10.71.24.120>
+route add -net <10.71.24.120> netmask <255.255.255.252> gw <10.71.24.124>
+route add -net <10.71.24.125> netmask <255.255.255.252> gw <10.71.24.124>
+route add -net <10.71.24.129> netmask <255.255.255.252> gw <10.71.24.128>
+route add -net <10.71.24.133> netmask <255.255.255.252> gw <10.71.24.132>
+route add -net <10.71.24.140> netmask <255.255.255.252> gw <10.71.24.132>
+route add -net <10.71.24.144> netmask <255.255.255.252> gw <10.71.24.132>
+route add -net <10.71.24.148> netmask <255.255.255.252> gw <10.71.24.144>
+```
+
+- Eisen (A12, A13, A14, A15, A16)
+```
+route add -net <10.71.24.104> netmask <255.255.255.248> gw <10.71.24.132>
+route add -net <10.71.24.105> netmask <255.255.255.248> gw <10.71.24.132>
+route add -net <10.71.24.106> netmask <255.255.255.248> gw <10.71.24.132>
+route add -net <10.71.24.136> netmask <255.255.255.252> gw <10.71.24.132>
+route add -net <10.71.24.137> netmask <255.255.255.252> gw <10.71.24.136>
+route add -net <10.71.24.140> netmask <255.255.255.252> gw <10.71.24.132>
+route add -net <10.71.12.0> netmask <255.255.252.0> gw <10.71.24.140>
+route add -net <10.71.22.0> netmask <255.255.255.0> gw <10.71.24.140>
+```
+
+- Linie (A21)
+```
+route add -net <10.71.20.0> netmask <255.255.254.0> gw <10.71.24.144>
+route add -net <10.71.20.1> netmask <255.255.254.0> gw <10.71.20.0>
+```
+
+- Lawine (A19)
+```
+route add -net <10.71.24.0> netmask <255.255.255.192> gw <10.71.24.148>
+route add -net <10.71.24.2> netmask <255.255.255.192> gw <10.71.24.0>
+```
+
+- Heiter (A20)
+```
+route add -net <10.71.16.0> netmask <255.255.252.0> gw <10.71.24.1>
+route add -net <10.71.16.1> netmask <255.255.252.0> gw <10.71.24.1>
+```
+
+- Denken (A10)
+```
+route add -net <10.71.23.0> netmask <255.255.255.0> gw <10.71.24.128>
+route add -net <10.71.23.2> netmask <255.255.255.0> gw <10.71.24.128>
+```
+
+- Frieren (A6, A7)
+```
+route add -net <10.71.24.120> netmask <255.255.255.252> gw <10.71.24.124>
+route add -net <10.71.24.64> netmask <255.255.255.224> gw <10.71.24.124>
+```
+
+- Flamme (A2, A3, A4)
+```
+route add -net <10.71.8.0> netmask <255.255.252.0> gw <10.71.24.120>
+route add -net <10.71.24.112> netmask <255.255.255.252> gw <10.71.24.120>
+route add -net <10.71.24.116> netmask <255.255.255.252> gw <10.71.24.120>
+route add -net <10.71.24.96> netmask <255.255.255.248> gw <10.71.24.116>
+```
+
+- Himmel (A5)
+```
+route add -net <10.71.24.97> netmask <255.255.255.248> gw <10.71.24.96>
+```
+
+- Fern (A1)
+```
+route add -net <10.71.0.0> netmask <255.255.248.0> gw <10.71.24.112>
+route add -net <10.71.0.1> netmask <255.255.248.0> gw <10.71.0.0>
+route add -net <10.71.0.2> netmask <255.255.248.0> gw <10.71.0.0>
+```
+
+- Kemudian jalankan command `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.71.0.0/15` pada Aura
+- Pastikan untuk memasukkan nameserver pada `etc/resolv.conf`
+`echo "nameserver 192.168.122.1
+nameserver 10.71.0.0" > /etc/resolv.conf`
+
+### Kendala
+- Proses routing sulit dan mengalami error
 
